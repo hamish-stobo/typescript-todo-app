@@ -1,8 +1,10 @@
 # TypeScript Todo App
 
-![image](https://user-images.githubusercontent.com/51815749/120060321-34a37400-c0ab-11eb-9d7e-ee6e674655e6.png)
+![image](https://user-images.githubusercontent.com/51815749/120060384-ab407180-c0ab-11eb-921f-ae99f7cf121b.png)
 
 This app was built to learn TypeScript and how it interacts with React.
+You can add, edit, complete and delete todos.
+The todo list persists on browser refresh through the use of local storage.
 
 I also added ESLint and Prettier to make enforce code formatting, and followed this guide to implement:
 
