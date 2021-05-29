@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+##Prettier and eslint
+npx eslint src/App.tsx --quiet --fix
+##sauce
+https://medium.com/how-to-react/config-eslint-and-prettier-in-visual-studio-code-for-react-js-development-97bb2236b31a
+
 ## Available Scripts
 
 In the project directory, you can run:
