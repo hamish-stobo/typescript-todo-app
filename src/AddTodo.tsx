@@ -13,14 +13,22 @@ const AddTodo = ({ AddFn }: AddTodoProp): JSX.Element => {
     }
     return (
         <>
-            <form onSubmit={submitFn}>
+            <form
+                onSubmit={submitFn}
+                className="flex flex-row justify-between shadow my-2"
+            >
                 <input
+                    className="p-2 m-2 w-9/12 placeholder-gray-500"
                     type="text"
                     placeholder="Add a Todo"
                     onChange={(e) => setTodo(e.target.value)}
                     value={todo}
                 />
-                <input type="submit" value="Add Todo" />
+                <input
+                    className="p-2 cursor-pointer w-3/12"
+                    type="submit"
+                    value="Add Todo"
+                />
             </form>
         </>
     )
