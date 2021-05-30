@@ -1,28 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 type TodoProps = {
     todo: string
-    removeTodo: (a: string) => void
-    updateTodo: (content: string, index: number) => void
+    updateTodo: (type: string, content: string, index: number) => void
     idx: number
     checked: boolean
-    setChecked: (idx: number) => void
 }
 
-const Todo = ({
-    todo,
-    removeTodo,
-    updateTodo,
-    idx,
-    checked,
-    setChecked,
-}: TodoProps): JSX.Element => {
+const Todo = ({ todo, updateTodo, idx, checked }: TodoProps): JSX.Element => {
+    const [_todo, setTodo] = useState(todo)
+    // update local state on change
     return (
         <div className="my-2 flex flex-row justify-between items-stretch shadow">
             <button
                 className="p-2 text-2xl w-2/12"
                 type="button"
-                onClick={() => setChecked(idx)}
+                onClick={() => updateTodo('check', _todo, idx)}
             >
                 ✅
             </button>
@@ -31,13 +24,13 @@ const Todo = ({
                     checked ? 'line-through' : ''
                 }`}
                 type="text"
-                value={todo}
-                onChange={(e) => updateTodo(e.target.value, idx)}
+                value={_todo}
+                onChange={(e) => setTodo(e.target.value)}
             />
             <button
                 className="p-2 w-2/12 text-2xl"
                 type="button"
-                onClick={() => removeTodo(todo)}
+                onClick={() => updateTodo('remove', _todo, idx)}
             >
                 ❌
             </button>
