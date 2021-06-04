@@ -8,7 +8,7 @@ The todo list persists on browser refresh through the use of local storage.
 
 I also added ESLint and Prettier to make enforce code formatting, and followed this guide to implement:
 
-https://medium.com/how-to-react/config-eslint-and-prettier-in-visual-studio-code-for-react-js-development-97bb2236b31a
+https://javascript.plainenglish.io/setting-eslint-and-prettier-on-a-react-typescript-project-2021-22993565edf9
 
 ## Available Scripts
 
